@@ -13,7 +13,14 @@ const PORT = process.env.PORT || 5000;
 
 // middleware
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: 'https://nscf-ecommerce.vercel.app/', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, 
+  optionsSuccessStatus: 204, 
+};
+
+app.use(cors(corsOptions));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 
