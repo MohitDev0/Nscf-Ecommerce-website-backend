@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 // middleware
 app.use(express.json());
 const corsOptions = {
-  origin: 'https://nscf-ecommerce.vercel.app/', 
+  origin: 'https://nscf-ecommerce.vercel.app', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, 
   optionsSuccessStatus: 204, 
