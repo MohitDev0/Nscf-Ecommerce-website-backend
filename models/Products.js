@@ -4,7 +4,7 @@ const ProductSchema = new mongoose.Schema({
     name: {
         type: String,
     },
-    title: {
+    desc: {
         type: String,
     },
     available: {

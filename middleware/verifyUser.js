@@ -2,7 +2,7 @@ const privateKey = process.env.privateKey;
 const jwt = require('jsonwebtoken');
 function verifyuser(req, res, cb) {
     let token = req.headers['authorization'];
-    if (token) {    
+    if (token) {
         token = token.split(" ")[1];
         jwt.verify(token, privateKey, { algorithm: 'HS384' }, function (err, decoded) {
             if (err) {
@@ -11,7 +11,7 @@ function verifyuser(req, res, cb) {
                 if (decoded.user.isAdmin) {
                     req.body.user = decoded.user;
                     cb();
-                }else{
+                } else {
                     res.status(401).json("user is not Admin");
                 }
             }

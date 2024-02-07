@@ -7,12 +7,15 @@ const userRoute = require("./routes/user");
 const ProductRoute = require("./routes/product");
 const FeatureRoute = require("./routes/Features");
 const CommentRoute = require("./routes/comment");
+const path = require('path');
 const cors = require("cors");
 const PORT = process.env.PORT || 5000;
 
 // middleware
 app.use(express.json());
 app.use(cors());
+app.use('/images', express.static(path.join(__dirname, 'images')));
+
 
 // routes
 app.use("/api/auth", authRoute);

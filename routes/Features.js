@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Features = require("../models/Features");
-const verifyUser = require("../middleware/verifyUser");
+// const verifyUser = require("../middleware/verifyUser");
 
 // get features 
 router.get("/", async (req, res) => {
