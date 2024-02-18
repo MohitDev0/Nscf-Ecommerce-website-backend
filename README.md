@@ -42,7 +42,7 @@ Password: redak123
     Normal users can proceed to checkout and complete the purchase.
     
 # Technologies Used
-  List the technologies and frameworks used in building your website.
+  
     MongoDB
     Express.js
     React
